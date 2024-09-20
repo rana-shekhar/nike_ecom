@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
 
@@ -11,7 +13,7 @@ class IntroPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: Column(
-
+mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Logo
               Padding(
@@ -41,16 +43,24 @@ class IntroPage extends StatelessWidget {
               ),
               const SizedBox(height: 48),
 
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.grey[900],
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
-                padding: EdgeInsets.all(25.0),
-                child: const Center(
-                  child: Text(
-                      'Shop Now',
-                          style: TextStyle(color: Colors.white),
+              GestureDetector(
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),
+                )),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey[900],
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  padding: EdgeInsets.all(25.0),
+                  child: const Center(
+                    child: Text(
+                        'Shop Now',
+                            style: TextStyle(color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                
+                    ),
                   ),
                 ),
               )
