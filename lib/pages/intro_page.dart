@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 import 'home_page.dart';
 
@@ -15,14 +16,28 @@ class IntroPage extends StatelessWidget {
           child: Column(
 mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Logo
-              Padding(
-                padding: const EdgeInsets.all(25.0),
-                child: Image.asset(
-                  'assets/images/test.png',  // Correct path
-                  height: 240,
-                ),
+              // Logo hai but lgg ni rha
+              Image.asset(
+                  "assets/images/test.png",
+                height: 200,
+                width: 150,
               ),
+              // Padding(
+              //   padding: const EdgeInsets.all(25.0),
+              //   child: ClipRRect(
+              //     borderRadius: BorderRadius.circular(100.0),
+              //     child: Container(
+              //       decoration: BoxDecoration(
+              //         borderRadius: BorderRadius.circular(100.0),
+              //       ),
+              //       child: Lottie.network(
+              //         "https://lottie.host/5d272e7e-552c-4e1a-9c59-ee0194071648/WVVRzDjGWH.json",
+              //         height: 100,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+
               const SizedBox(height: 48),
               const Text(
                   'Just Do It',
@@ -44,14 +59,14 @@ mainAxisAlignment: MainAxisAlignment.center,
               const SizedBox(height: 48),
 
               GestureDetector(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage(),
                 )),
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.grey[900],
                     borderRadius: BorderRadius.circular(12.0),
                   ),
-                  padding: EdgeInsets.all(25.0),
+                  padding: const EdgeInsets.all(25.0),
                   child: const Center(
                     child: Text(
                         'Shop Now',
@@ -59,7 +74,7 @@ mainAxisAlignment: MainAxisAlignment.center,
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
                             ),
-                
+
                     ),
                   ),
                 ),
