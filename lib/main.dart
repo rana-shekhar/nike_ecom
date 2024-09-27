@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nike/models/cart.dart';
+import 'package:nike/pages/login_page.dart';
+import 'package:provider/provider.dart';
 
 import 'pages/intro_page.dart';
 
@@ -11,11 +14,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: IntroPage(),
-
+    return ChangeNotifierProvider(
+      create: (context) => Cart(),
+      builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: LoginPage(),
+      ),
     );
   }
 }
-
